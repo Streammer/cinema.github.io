@@ -64,12 +64,9 @@ input {
 
 .grid {
     display: grid;
-    grid-template-areas:
-        "my-header my-header"
-        "my-aside my-main"
-        "my-aside my-main";
+    grid-template-areas: "my-header my-header" "my-aside my-main" "my-aside my-main";
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    gap: 8rem 5.9rem;
+    gap: 8rem 0;
 }
 
 .grid-init {
@@ -80,9 +77,73 @@ input {
 
 .header__wrap {
     display: flex;
+    align-items: center;
 }
 
+.header__logo {
+    font-size: 6.4rem;
+    margin-right: 7rem;
+}
+
+.header__nav a {
+    font-size: 2.4rem;
+}
+
+.header__nav a:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.header__nav {
+    margin-right: 9.2rem;
+}
+
+.header__find {
+    width: 33rem;
+    height: 4.1rem;
+    border-radius: 0.8rem;
+    margin-right: 3.9rem;
+}
+
+.header__find input {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.08) url('../img/search.svg') no-repeat;
+    background-position: top 50% right 1.5rem;
+    background-size: 2rem;
+    border-radius: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 4.5rem;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.header__find input::placeholder {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.header__date {
+    text-align: center;
+    margin-right: 8.6rem;
+}
+
+.header__hour {
+    font-size: 2rem;
+}
+
+.header__days {
+    font-size: 1.2rem;
+}
+
+.header__personal {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+
 /*grid*/
+
 @media (max-width: 108em) {
     html {
         font-size: 9px;
@@ -172,5 +233,6 @@ input {
         font-size: 4.4px;
     }
 }
+
 
 /*and of the grid*/
