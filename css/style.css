@@ -64,7 +64,10 @@ input {
 
 .grid {
     display: grid;
-    grid-template-areas: "my-header my-header" "my-aside my-main" "my-aside my-main";
+    grid-template-areas: 
+    "my-header my-header my-header" 
+    "my-aside my-main my-main" 
+    "my-aside my-main my-main";
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     gap: 8rem 0;
 }
@@ -83,10 +86,14 @@ input {
 .header__logo {
     font-size: 6.4rem;
     margin-right: 7rem;
+    font-weight: 700;
+    line-height: 117%;
 }
 
 .header__nav a {
     font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 117%;
 }
 
 .header__nav a:not(:last-child) {
@@ -114,6 +121,7 @@ input {
     padding-left: 1rem;
     padding-right: 4.5rem;
     font-size: 2rem;
+    line-height: 115%;
     color: #ffffff;
 }
 
@@ -129,10 +137,12 @@ input {
 
 .header__hour {
     font-size: 2rem;
+    line-height: 115%;
 }
 
 .header__days {
     font-size: 1.2rem;
+    line-height: 117%;
 }
 
 .header__personal {
