@@ -657,6 +657,10 @@ input {
 	height: 60rem;
 }
 
+.active {
+	display: flex;
+}
+
 /*grid*/
 
 @media (max-width: 108em) {
