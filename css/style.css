@@ -69,13 +69,17 @@ input {
 		"my-aside my-main my-main"
 		"my-aside my-main my-main";
 	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-	gap: 8rem 0;
+	gap: 3rem 0;
 }
 
 .grid-init {
 	max-width: 144rem;
 	margin: auto;
 	padding: 3rem 2.4rem 4rem;
+}
+
+.header {
+	box-shadow: 0 .4rem 1rem rgba(255, 255, 255, 0.07);
 }
 
 .header__wrap {
@@ -161,6 +165,10 @@ input {
 	background-color: rgba(0, 0, 0, 0.4);
 	z-index: 0;
 } */
+
+.main-display {
+	padding-top: 5rem;
+}
 
 .main-display__trailer {
 	position: relative;
@@ -419,8 +427,38 @@ input {
 
 .aside {
 	padding-right: 5.9rem;
-
+	position: relative;
 }
+
+.aside::after {
+	content: url('../img/ridht-black-arrow.svg');
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 2.2rem;
+	height: 2.6rem;
+	background: #fcfcfe;
+	border-radius: 2rem;
+	position: absolute;
+	top: 10.7rem;
+	right:4.9rem;
+	cursor: pointer;
+}
+
+.aside__wrap {
+	background:  rgba(255, 255, 255, 0.02);
+	margin-left: -2.4rem;
+}
+
+.aside__top {
+	padding-top: 5rem;
+	padding-right: 2.3rem;
+	padding-left: 2.4rem;
+	padding-bottom: 4rem;
+	background: #17161b;
+	border-right: .1rem solid #1C1B1F;
+}
+
 .aside__title {
 	display: flex;
 	justify-content: space-between;
@@ -486,7 +524,7 @@ input {
 
 .aside__item:nth-child(3) {
 	margin-top: 3rem;
-	margin-bottom: 4rem;
+	/* margin-bottom: 4rem; */
 }
 
 .aside__views {
@@ -497,11 +535,27 @@ input {
 	/* z-index: 10; */
 }
 
-.aside__footer {
+.aside__footer{
 	position: relative;
 	/* z-index: 10; */
-	
 }
+
+.aside__footer-bottom {
+	position: relative;
+}
+
+.aside__footer-bottom:before {
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: 0;
+	transform: translate(0, 50%);
+	display: block;
+	width: 6.5rem;
+	height: .1rem;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
 
 .aside__item-name {
 	margin-bottom: .5rem;
@@ -517,8 +571,8 @@ input {
 }
 
 .aside__bottom {
-	padding: 2.5rem 0 2rem 0;
-	background: rgba(255, 255, 255, 0.02);
+	padding: 2.5rem 0 2rem 2.4rem;
+	/* background: rgba(255, 255, 255, 0.02); */
 }
 .aside__favourite-text {
 	margin-bottom: 2rem;
