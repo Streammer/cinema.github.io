@@ -79,7 +79,7 @@ input {
 }
 
 .header {
-	box-shadow: 0 .4rem 1rem rgba(255, 255, 255, 0.07);
+	box-shadow: 0 .4rem .8rem rgba(255, 255, 255, 0.07);
 }
 
 .header__wrap {
@@ -661,7 +661,7 @@ input {
 	display: flex;
 }
 
-/*grid*/
+/*grid adaptive*/
 
 @media (max-width: 108em) {
 	html {
@@ -752,6 +752,4 @@ input {
 		font-size: 4.4px;
 	}
 }
-
-
 /*and of the grid*/
