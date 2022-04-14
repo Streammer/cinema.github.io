@@ -828,6 +828,40 @@ input {
 	html {
 		font-size: 8px;
 	}
+	.trending {
+		flex-wrap: wrap;
+	}
+	.trending .trending__item {
+		width: 100%;
+	}
+	.trending .trending__item:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	.small {
+		left: 6%;
+	}
+
+	.popular {
+		flex-wrap: wrap;
+	}
+
+	.popular__item {
+		width: 100%;
+	}
+
+	.popular__item:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	.small-plus {
+		left: 3%;
+	}
+
+	.main-display__trailer, .trending__item , .popular__item , .aside__item{
+		height: 30rem;
+		background-size: cover;
+	}
 }
 
 @media (max-width: 34em) {

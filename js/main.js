@@ -61,7 +61,6 @@ collapsButton.addEventListener('click', () => {
 const headerMobile = document.querySelector('.header__mobile')
 
 const gamburger = document.querySelector('.bars__container').addEventListener('click', function() {
-    console.log(this);
     this.classList.toggle("change");
     headerMobile.classList.toggle('active')
 })
