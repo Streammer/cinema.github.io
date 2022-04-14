@@ -54,6 +54,10 @@ input {
 	grid-area: my-header;
 }
 
+.header__mobile {
+	grid-area: my-header-mobile
+}
+
 .main {
 	grid-area: my-main;
 }
@@ -171,7 +175,7 @@ input {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	background:linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/back-trailer.png');
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/back-trailer.png');
 	padding: 1.9rem 0 1.9rem 1.9rem;
 }
 
@@ -274,7 +278,8 @@ input {
 	background-position: center;
 }
 
-.trending, .popular {
+.trending,
+.popular {
 	display: flex;
 	justify-content: space-between;
 }
@@ -291,7 +296,8 @@ input {
 	line-height: 120%;
 }
 
-.trending__footer, .popular__footer {
+.trending__footer,
+.popular__footer {
 	position: relative;
 	width: 100%;
 	padding: 1.8rem 1rem 1.8rem 6.4rem;
@@ -347,7 +353,7 @@ input {
 	outline: none;
 	border: none;
 	width: 100%;
-	height: 100%; 
+	height: 100%;
 	background: none;
 	background-size: 1.1rem 1.1rem;
 	background-image: url(../img/polygon-medium.svg);
@@ -404,7 +410,7 @@ input {
 	position: relative;
 }
 
-.aside::after {
+/* .aside::after {
 	content: '';
 	background-image: url('../img/ridht-black-arrow.svg');
 	background-repeat: no-repeat;
@@ -420,10 +426,27 @@ input {
 	top: 10.7rem;
 	right:4.9rem;
 	cursor: pointer;
+} */
+
+.aside__collaps {
+	background-image: url('../img/ridht-black-arrow.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 2.2rem;
+	height: 2.6rem;
+	border-radius: 2rem;
+	position: absolute;
+	top: 10.7rem;
+	right: 4.9rem;
+	cursor: pointer;
 }
 
 .aside__wrap {
-	background:  rgba(255, 255, 255, 0.02);
+	background: rgba(255, 255, 255, 0.02);
 	margin-left: -2.4rem;
 }
 
@@ -510,7 +533,7 @@ input {
 	line-height: 119%;
 }
 
-.aside__footer{
+.aside__footer {
 	position: relative;
 }
 
@@ -547,6 +570,7 @@ input {
 .aside__bottom {
 	padding: 2.5rem 0 2rem 2.4rem;
 }
+
 .aside__favourite-text {
 	margin-bottom: 2rem;
 	font-size: 2rem;
@@ -608,6 +632,11 @@ input {
 	margin-right: .5rem;
 }
 
+
+.box-init {
+	display: none;
+}
+
 .modal {
 	position: fixed;
 	top: 0;
@@ -632,6 +661,14 @@ input {
 
 .active {
 	display: flex;
+}
+
+.header__mobile {
+	display: none;
+}
+
+.bars__container {
+	display: none;
 }
 
 /*grid adaptive*/
@@ -688,6 +725,97 @@ input {
 	html {
 		font-size: 10px;
 	}
+
+	.grid {
+		grid-template-areas:
+			"my-header my-header my-header"
+			"my-header-mobile my-header-mobile my-header-mobile"
+			"my-main my-main my-main"
+			"my-main my-main my-main"
+			"my-aside my-aside my-aside";
+	}
+
+	.aside {
+		padding-right: 0;
+	}
+
+	.aside__collaps {
+		display: none;
+	}
+
+	.header .header__nav,
+	.header .header__date,
+	.header .header__personal {
+		display: none;
+	}
+
+	.header__mobile .header__nav,
+	.header__mobile .header__date {
+		margin-bottom: 2rem;
+	}
+
+	.header__mobile .header__nav a:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	.header .header__find {
+		margin-right: 0;
+	}
+
+	.header__logo {
+		font-size: 3rem;
+		line-height: 100%;
+		margin-right: 0;
+	}
+
+	.header__mobile .header__wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.header__mobile .header__nav {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.header__mobile.active {
+		display: flex;
+	}
+
+	.main-display {
+		padding-top: 0;
+	}
+
+	/*gamburger menu*/
+
+	.bars__container {
+		display: block;
+		order: 1;
+	}
+
+	.bar1,
+	.bar2,
+	.bar3 {
+		width: 30px;
+		height: 4px;
+		background-color: #fff;
+		margin: 6px 0;
+		transition: 0.4s;
+	}
+
+	.change .bar1 {
+		transform: rotate(-45deg) translate(-6px, 6px);
+	}
+
+	.change .bar2 {
+		opacity: 0;
+	}
+
+	.change .bar3 {
+		-webkit-transform: rotate(45deg) translate(-8px, -8px);
+		transform: rotate(45deg) translate(-8px, -8px);
+	}
 }
 
 @media (max-width: 44em) {
@@ -725,4 +853,5 @@ input {
 		font-size: 4.4px;
 	}
 }
+
 /*and of the grid*/

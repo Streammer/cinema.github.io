@@ -46,3 +46,22 @@ modalWindow.addEventListener('click', () => {
     onPlayerReady()
     modalWindow.classList.remove('active')
 })
+
+//collaps sidebar
+
+const asideContainer = document.querySelector('.aside')
+const collapsButton = document.querySelector('.aside__collaps')
+
+collapsButton.addEventListener('click', () => {
+    asideContainer.classList.add('box-init')
+})
+
+//gamburger 
+
+const headerMobile = document.querySelector('.header__mobile')
+
+const gamburger = document.querySelector('.bars__container').addEventListener('click', function() {
+    console.log(this);
+    this.classList.toggle("change");
+    headerMobile.classList.toggle('active')
+})
